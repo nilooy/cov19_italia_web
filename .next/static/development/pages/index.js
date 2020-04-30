@@ -452,7 +452,7 @@ var _this = undefined,
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
-/*global google*/
+/* eslint-disable no-undef */
 
 
 
