@@ -199,6 +199,7 @@ var Footer = function Footer() {
       columnNumber: 7
     }
   }, __jsx("a", {
+    target: "_blank",
     className: "text-white",
     href: "https://github.com/theprogboy/cov19_italia_api",
     __self: _this,
@@ -214,7 +215,7 @@ var Footer = function Footer() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13,
+      lineNumber: 14,
       columnNumber: 11
     }
   })), " ", "Datasource:", " ", __jsx("a", {
@@ -224,7 +225,7 @@ var Footer = function Footer() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20,
+      lineNumber: 21,
       columnNumber: 9
     }
   }, "Protezione Civile")));

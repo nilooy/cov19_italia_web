@@ -6,6 +6,7 @@ const Footer = () => {
       <div className="footer footer-left">Made with &#10084; by Niloy</div>
       <div className="footer footer-right">
         <a
+          target="_blank"
           className="text-white"
           href="https://github.com/theprogboy/cov19_italia_api"
         >
