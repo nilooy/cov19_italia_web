@@ -1,4 +1,4 @@
-/*global google*/
+/* eslint-disable no-undef */
 import React, { useState } from "react";
 import {
   GoogleMap,
