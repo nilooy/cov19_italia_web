@@ -1116,10 +1116,10 @@ const Index = () => {
   const {
     0: darkMode,
     1: setDarkMode
-  } = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(false);
+  } = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(true);
 
   const getDarkMode = () => {
-    if (localStorage.getItem("darkMode") == "true") setDarkMode(true);else setDarkMode(false);
+    if (localStorage.getItem("darkMode") == "true") setDarkMode(true);else if (localStorage.getItem("darkMode") == "false") setDarkMode(false);else setDarkMode(true);
   };
 
   const toggleDarkMode = () => {
@@ -1144,7 +1144,7 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43,
+      lineNumber: 44,
       columnNumber: 5
     }
   }, __jsx("main", {
@@ -1152,7 +1152,7 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44,
+      lineNumber: 45,
       columnNumber: 7
     }
   }, __jsx("div", {
@@ -1160,7 +1160,7 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45,
+      lineNumber: 46,
       columnNumber: 9
     }
   }, __jsx("section", {
@@ -1168,7 +1168,7 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46,
+      lineNumber: 47,
       columnNumber: 11
     }
   }, __jsx(_components_LeftSideBar__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -1177,7 +1177,7 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47,
+      lineNumber: 48,
       columnNumber: 13
     }
   })), __jsx("section", {
@@ -1185,7 +1185,7 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50,
+      lineNumber: 51,
       columnNumber: 11
     }
   }, __jsx(_components_Map__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -1194,14 +1194,14 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51,
+      lineNumber: 52,
       columnNumber: 13
     }
   }), __jsx(_components_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52,
+      lineNumber: 53,
       columnNumber: 13
     }
   })), __jsx("section", {
@@ -1212,7 +1212,7 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55,
+      lineNumber: 56,
       columnNumber: 11
     }
   }, __jsx(_components_RightSideBar__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -1222,7 +1222,7 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62,
+      lineNumber: 63,
       columnNumber: 13
     }
   })))));

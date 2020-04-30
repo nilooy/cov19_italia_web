@@ -9,11 +9,12 @@ import Layout from "../Layout";
 const Index = () => {
   const [state, setState] = useState([]);
 
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   const getDarkMode = () => {
     if (localStorage.getItem("darkMode") == "true") setDarkMode(true);
-    else setDarkMode(false);
+    else if (localStorage.getItem("darkMode") == "false") setDarkMode(false);
+    else setDarkMode(true);
   };
 
   const toggleDarkMode = () => {
