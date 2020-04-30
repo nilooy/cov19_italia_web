@@ -9,7 +9,8 @@ const CardStat = (props) => {
           {props.title}
         </h5>
         <h5 className="card-text">
-          <CountUp end={parseInt(props.text)} />
+          {!props.dateField && <CountUp end={parseInt(props.text)} />}
+          {props.dateField && props.text}
         </h5>
       </div>
     </div>

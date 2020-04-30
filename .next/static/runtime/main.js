@@ -942,7 +942,7 @@ function connect(options) {
       error.name = err.name;
       error.stack = err.stack; // __NEXT_DIST_DIR is provided by webpack
 
-      (0, _sourceMapSupport.rewriteStacktrace)(error, "D:\\Code\\Practice\\cov19ItaliaWeb\\.next");
+      (0, _sourceMapSupport.rewriteStacktrace)(error, "D:\\Code\\Personal\\dev\\covid19it\\cov19ItaliaWeb\\.next");
       return error;
     }
   };

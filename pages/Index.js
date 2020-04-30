@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import Footer from "../components/Footer";
 import LeftSideBar from "../components/LeftSideBar";
 import Map from "../components/Map";
 import RightSideBar from "../components/RightSideBar";
@@ -13,7 +14,7 @@ const Index = () => {
   }, []);
 
   const getData = (route) => {
-    axios.get("http://localhost:8000/" + route).then((res) => {
+    axios.get(process.env.API_URL + route).then((res) => {
       let data = res.data;
 
       data = data.filter(
@@ -35,6 +36,7 @@ const Index = () => {
 
           <section className="col-md-8 px-0 border-right border-left border-gray position-relative h-100">
             <Map cordinates={state} />
+            <Footer />
           </section>
 
           <section

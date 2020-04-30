@@ -7,8 +7,9 @@ import {
   withGoogleMap,
   withScriptjs,
 } from "react-google-maps";
+import mapStyles from "./mapStyles";
 
-const API_KEY = "";
+const API_KEY = process.env.MAP_API;
 const MAP_URL = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}&v=3.exp&libraries=geometry`;
 
 const MapComp = withScriptjs(
@@ -17,6 +18,7 @@ const MapComp = withScriptjs(
       defaultOptions={{ styles: "retro" }}
       defaultZoom={6}
       defaultCenter={{ lat: 41.8719, lng: 12.5674 }}
+      styles={mapStyles}
     >
       {props.children}
     </GoogleMap>

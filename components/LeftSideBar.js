@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { Fragment, useEffect, useState } from "react";
+import Clock from "react-live-clock";
 import CardStat from "./CardStat";
 
 const LeftSideBar = () => {
@@ -14,7 +15,7 @@ const LeftSideBar = () => {
   });
 
   useEffect(() => {
-    axios.get("http://localhost:8000/stats").then((res) => {
+    axios.get(process.env.API_URL + "stats").then((res) => {
       const resData = res.data[0];
 
       setState({
@@ -50,16 +51,36 @@ const LeftSideBar = () => {
         className="border-bottom border-gray w-100 px-2 d-flex align-items-center bg-white justify-content-between"
         style={{ height: 90 }}
       >
-        <span className="h5 text-dark mb-0 mx-4 font-weight-bold">
-          Statistica
-        </span>
+        <div>
+          <img
+            className="logo_anim"
+            src="https://image.flaticon.com/icons/svg/2659/2659980.svg"
+            alt="cov19"
+          />
+          <span className="h5 text-dark mb-0 mx-2 font-weight-bold">
+            Statistica
+          </span>
+          <br />
+          <p>
+            <Clock
+              format={"D/MM/YYYY:HH:mm:ss"}
+              ticking={true}
+              timezone={"Europe/Rome"}
+            />
+          </p>
+        </div>
       </div>
       <div
         className="w-100 d-flex flex-wrap align-items-start align-content-start position-relative"
         style={{ height: "calc(100% - 90px)", overflowY: "auto" }}
       >
         {Object.keys(state).map((key, index) => (
-          <CardStat title={makeUpperCase(key)} text={state[key]} key={index} />
+          <CardStat
+            title={makeUpperCase(key)}
+            text={state[key]}
+            key={index}
+            dateField={key == "l'ultimo_aggiornamento" ? true : false}
+          />
         ))}
       </div>
     </Fragment>

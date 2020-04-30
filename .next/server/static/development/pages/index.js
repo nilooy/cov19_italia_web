@@ -106,7 +106,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "D:\\Code\\Practice\\cov19ItaliaWeb\\Layout.js";
+var _jsxFileName = "D:\\Code\\Personal\\dev\\covid19it\\cov19ItaliaWeb\\Layout.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
@@ -179,7 +179,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_countup__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-countup */ "react-countup");
 /* harmony import */ var react_countup__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_countup__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "D:\\Code\\Practice\\cov19ItaliaWeb\\components\\CardStat.js";
+var _jsxFileName = "D:\\Code\\Personal\\dev\\covid19it\\cov19ItaliaWeb\\components\\CardStat.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -223,18 +223,92 @@ const CardStat = props => {
       lineNumber: 11,
       columnNumber: 9
     }
-  }, __jsx(react_countup__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, !props.dateField && __jsx(react_countup__WEBPACK_IMPORTED_MODULE_1___default.a, {
     end: parseInt(props.text),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12,
-      columnNumber: 11
+      columnNumber: 32
     }
-  }))));
+  }), props.dateField && props.text)));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (CardStat);
+
+/***/ }),
+
+/***/ "./components/Footer.js":
+/*!******************************!*\
+  !*** ./components/Footer.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "D:\\Code\\Personal\\dev\\covid19it\\cov19ItaliaWeb\\components\\Footer.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+const Footer = () => {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5,
+      columnNumber: 5
+    }
+  }, __jsx("div", {
+    className: "footer footer-left",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6,
+      columnNumber: 7
+    }
+  }, "Made with \u2764 by Niloy"), __jsx("div", {
+    className: "footer footer-right",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7,
+      columnNumber: 7
+    }
+  }, __jsx("a", {
+    className: "text-white",
+    href: "https://github.com/theprogboy/cov19_italia_api",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8,
+      columnNumber: 9
+    }
+  }, "Api", " ", __jsx("img", {
+    width: "20",
+    src: "https://image.flaticon.com/icons/svg/1051/1051326.svg",
+    alt: "",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13,
+      columnNumber: 11
+    }
+  })), " ", "Datasource:", " ", __jsx("a", {
+    className: "text-white",
+    href: "https://github.com/pcm-dpc/COVID-19",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20,
+      columnNumber: 9
+    }
+  }, "Protezione Civile")));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Footer);
 
 /***/ }),
 
@@ -251,9 +325,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _CardStat__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./CardStat */ "./components/CardStat.js");
-var _jsxFileName = "D:\\Code\\Practice\\cov19ItaliaWeb\\components\\LeftSideBar.js";
+/* harmony import */ var react_live_clock__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-live-clock */ "react-live-clock");
+/* harmony import */ var react_live_clock__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_live_clock__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _CardStat__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./CardStat */ "./components/CardStat.js");
+var _jsxFileName = "D:\\Code\\Personal\\dev\\covid19it\\cov19ItaliaWeb\\components\\LeftSideBar.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
 
 
 
@@ -272,7 +349,7 @@ const LeftSideBar = () => {
     data: Date.now()
   });
   Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(() => {
-    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("http://localhost:8000/stats").then(res => {
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("http://localhost:8000/api/" + "stats").then(res => {
       const resData = res.data[0];
       setState({
         nuovi_positivi: resData.nuovi_positivi,
@@ -307,7 +384,7 @@ const LeftSideBar = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48,
+      lineNumber: 49,
       columnNumber: 5
     }
   }, __jsx("div", {
@@ -318,18 +395,59 @@ const LeftSideBar = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49,
+      lineNumber: 50,
       columnNumber: 7
     }
-  }, __jsx("span", {
-    className: "h5 text-dark mb-0 mx-4 font-weight-bold",
+  }, __jsx("div", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53,
+      lineNumber: 54,
       columnNumber: 9
     }
-  }, "Statistica")), __jsx("div", {
+  }, __jsx("img", {
+    className: "logo_anim",
+    src: "https://image.flaticon.com/icons/svg/2659/2659980.svg",
+    alt: "cov19",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 55,
+      columnNumber: 11
+    }
+  }), __jsx("span", {
+    className: "h5 text-dark mb-0 mx-2 font-weight-bold",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 60,
+      columnNumber: 11
+    }
+  }, "Statistica"), __jsx("br", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 63,
+      columnNumber: 11
+    }
+  }), __jsx("p", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 64,
+      columnNumber: 11
+    }
+  }, __jsx(react_live_clock__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    format: "D/MM/YYYY:HH:mm:ss",
+    ticking: true,
+    timezone: "Europe/Rome",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 65,
+      columnNumber: 13
+    }
+  })))), __jsx("div", {
     className: "w-100 d-flex flex-wrap align-items-start align-content-start position-relative",
     style: {
       height: "calc(100% - 90px)",
@@ -338,17 +456,18 @@ const LeftSideBar = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57,
+      lineNumber: 73,
       columnNumber: 7
     }
-  }, Object.keys(state).map((key, index) => __jsx(_CardStat__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, Object.keys(state).map((key, index) => __jsx(_CardStat__WEBPACK_IMPORTED_MODULE_3__["default"], {
     title: makeUpperCase(key),
     text: state[key],
     key: index,
+    dateField: key == "l'ultimo_aggiornamento" ? true : false,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62,
+      lineNumber: 78,
       columnNumber: 11
     }
   }))));
@@ -371,13 +490,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_google_maps__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-google-maps */ "react-google-maps");
 /* harmony import */ var react_google_maps__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_google_maps__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "D:\\Code\\Practice\\cov19ItaliaWeb\\components\\Map.js";
+/* harmony import */ var _mapStyles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./mapStyles */ "./components/mapStyles.js");
+var _jsxFileName = "D:\\Code\\Personal\\dev\\covid19it\\cov19ItaliaWeb\\components\\Map.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 /*global google*/
 
 
-const MAP_URL = `https://maps.googleapis.com/maps/api/js?key=AIzaSyCSA62-dhozQFO_pcHIqDVRIQ_bv7tiXdQ&v=3.exp&libraries=geometry`;
+
+const API_KEY = "AIzaSyDoGcqIxP_gv9Z8ZoAiR3hvMr9NcwZniDE";
+const MAP_URL = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}&v=3.exp&libraries=geometry`;
 const MapComp = Object(react_google_maps__WEBPACK_IMPORTED_MODULE_1__["withScriptjs"])(Object(react_google_maps__WEBPACK_IMPORTED_MODULE_1__["withGoogleMap"])(props => __jsx(react_google_maps__WEBPACK_IMPORTED_MODULE_1__["GoogleMap"], {
   defaultOptions: {
     styles: "retro"
@@ -387,10 +509,11 @@ const MapComp = Object(react_google_maps__WEBPACK_IMPORTED_MODULE_1__["withScrip
     lat: 41.8719,
     lng: 12.5674
   },
+  styles: _mapStyles__WEBPACK_IMPORTED_MODULE_2__["default"],
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 15,
+    lineNumber: 17,
     columnNumber: 5
   }
 }, props.children)));
@@ -427,7 +550,7 @@ const Map = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 48,
+        lineNumber: 51,
         columnNumber: 23
       }
     }),
@@ -438,7 +561,7 @@ const Map = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 49,
+        lineNumber: 52,
         columnNumber: 25
       }
     }),
@@ -449,7 +572,7 @@ const Map = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 50,
+        lineNumber: 53,
         columnNumber: 19
       }
     }),
@@ -460,7 +583,7 @@ const Map = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46,
+      lineNumber: 49,
       columnNumber: 5
     }
   }, props.cordinates.map((item, index) => __jsx(react_google_maps__WEBPACK_IMPORTED_MODULE_1__["Marker"], {
@@ -480,7 +603,7 @@ const Map = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54,
+      lineNumber: 57,
       columnNumber: 9
     }
   }, state.infoIndex === index && __jsx(react_google_maps__WEBPACK_IMPORTED_MODULE_1__["InfoWindow"], {
@@ -488,14 +611,14 @@ const Map = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67,
+      lineNumber: 70,
       columnNumber: 13
     }
   }, __jsx("div", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68,
+      lineNumber: 71,
       columnNumber: 15
     }
   }, __jsx("h6", {
@@ -505,14 +628,14 @@ const Map = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69,
+      lineNumber: 72,
       columnNumber: 17
     }
   }, item.denominazione_provincia), __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72,
+      lineNumber: 75,
       columnNumber: 17
     }
   }, "Totale Casi:", " ", __jsx("span", {
@@ -520,7 +643,7 @@ const Map = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74,
+      lineNumber: 77,
       columnNumber: 19
     }
   }, " ", item.totale_casi)))))));
@@ -541,7 +664,7 @@ const Map = props => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "D:\\Code\\Practice\\cov19ItaliaWeb\\components\\RightSideBar.js";
+var _jsxFileName = "D:\\Code\\Personal\\dev\\covid19it\\cov19ItaliaWeb\\components\\RightSideBar.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -660,6 +783,160 @@ const RightSideBar = props => {
 
 /***/ }),
 
+/***/ "./components/mapStyles.js":
+/*!*********************************!*\
+  !*** ./components/mapStyles.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ([{
+  elementType: "geometry",
+  stylers: [{
+    color: "#ebe3cd"
+  }]
+}, {
+  elementType: "labels.text.fill",
+  stylers: [{
+    color: "#523735"
+  }]
+}, {
+  elementType: "labels.text.stroke",
+  stylers: [{
+    color: "#f5f1e6"
+  }]
+}, {
+  featureType: "administrative",
+  elementType: "geometry.stroke",
+  stylers: [{
+    color: "#c9b2a6"
+  }]
+}, {
+  featureType: "administrative.land_parcel",
+  elementType: "geometry.stroke",
+  stylers: [{
+    color: "#dcd2be"
+  }]
+}, {
+  featureType: "administrative.land_parcel",
+  elementType: "labels.text.fill",
+  stylers: [{
+    color: "#ae9e90"
+  }]
+}, {
+  featureType: "landscape.natural",
+  elementType: "geometry",
+  stylers: [{
+    color: "#dfd2ae"
+  }]
+}, {
+  featureType: "poi",
+  elementType: "geometry",
+  stylers: [{
+    color: "#dfd2ae"
+  }]
+}, {
+  featureType: "poi",
+  elementType: "labels.text.fill",
+  stylers: [{
+    color: "#93817c"
+  }]
+}, {
+  featureType: "poi.park",
+  elementType: "geometry.fill",
+  stylers: [{
+    color: "#a5b076"
+  }]
+}, {
+  featureType: "poi.park",
+  elementType: "labels.text.fill",
+  stylers: [{
+    color: "#447530"
+  }]
+}, {
+  featureType: "road",
+  elementType: "geometry",
+  stylers: [{
+    color: "#f5f1e6"
+  }]
+}, {
+  featureType: "road.arterial",
+  elementType: "geometry",
+  stylers: [{
+    color: "#fdfcf8"
+  }]
+}, {
+  featureType: "road.highway",
+  elementType: "geometry",
+  stylers: [{
+    color: "#f8c967"
+  }]
+}, {
+  featureType: "road.highway",
+  elementType: "geometry.stroke",
+  stylers: [{
+    color: "#e9bc62"
+  }]
+}, {
+  featureType: "road.highway.controlled_access",
+  elementType: "geometry",
+  stylers: [{
+    color: "#e98d58"
+  }]
+}, {
+  featureType: "road.highway.controlled_access",
+  elementType: "geometry.stroke",
+  stylers: [{
+    color: "#db8555"
+  }]
+}, {
+  featureType: "road.local",
+  elementType: "labels.text.fill",
+  stylers: [{
+    color: "#806b63"
+  }]
+}, {
+  featureType: "transit.line",
+  elementType: "geometry",
+  stylers: [{
+    color: "#dfd2ae"
+  }]
+}, {
+  featureType: "transit.line",
+  elementType: "labels.text.fill",
+  stylers: [{
+    color: "#8f7d77"
+  }]
+}, {
+  featureType: "transit.line",
+  elementType: "labels.text.stroke",
+  stylers: [{
+    color: "#ebe3cd"
+  }]
+}, {
+  featureType: "transit.station",
+  elementType: "geometry",
+  stylers: [{
+    color: "#dfd2ae"
+  }]
+}, {
+  featureType: "water",
+  elementType: "geometry.fill",
+  stylers: [{
+    color: "#b9d3c2"
+  }]
+}, {
+  featureType: "water",
+  elementType: "labels.text.fill",
+  stylers: [{
+    color: "#92998d"
+  }]
+}]);
+
+/***/ }),
+
 /***/ "./pages/index.js":
 /*!************************!*\
   !*** ./pages/index.js ***!
@@ -673,12 +950,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_LeftSideBar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/LeftSideBar */ "./components/LeftSideBar.js");
-/* harmony import */ var _components_Map__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Map */ "./components/Map.js");
-/* harmony import */ var _components_RightSideBar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/RightSideBar */ "./components/RightSideBar.js");
-/* harmony import */ var _Layout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Layout */ "./Layout.js");
-var _jsxFileName = "D:\\Code\\Practice\\cov19ItaliaWeb\\pages\\index.js";
+/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Footer */ "./components/Footer.js");
+/* harmony import */ var _components_LeftSideBar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/LeftSideBar */ "./components/LeftSideBar.js");
+/* harmony import */ var _components_Map__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Map */ "./components/Map.js");
+/* harmony import */ var _components_RightSideBar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/RightSideBar */ "./components/RightSideBar.js");
+/* harmony import */ var _Layout__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Layout */ "./Layout.js");
+var _jsxFileName = "D:\\Code\\Personal\\dev\\covid19it\\cov19ItaliaWeb\\pages\\index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
 
 
 
@@ -696,18 +975,18 @@ const Index = () => {
   }, []);
 
   const getData = route => {
-    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("http://localhost:8000/" + route).then(res => {
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("http://localhost:8000/api/" + route).then(res => {
       let data = res.data;
       data = data.filter(item => item.denominazione_provincia != "In fase di definizione/aggiornamento");
       setState(data);
     });
   };
 
-  return __jsx(_Layout__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  return __jsx(_Layout__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29,
+      lineNumber: 30,
       columnNumber: 5
     }
   }, __jsx("main", {
@@ -715,7 +994,7 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30,
+      lineNumber: 31,
       columnNumber: 7
     }
   }, __jsx("div", {
@@ -723,7 +1002,7 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31,
+      lineNumber: 32,
       columnNumber: 9
     }
   }, __jsx("section", {
@@ -731,14 +1010,14 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32,
+      lineNumber: 33,
       columnNumber: 11
     }
-  }, __jsx(_components_LeftSideBar__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, __jsx(_components_LeftSideBar__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33,
+      lineNumber: 34,
       columnNumber: 13
     }
   })), __jsx("section", {
@@ -746,15 +1025,22 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36,
+      lineNumber: 37,
       columnNumber: 11
     }
-  }, __jsx(_components_Map__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, __jsx(_components_Map__WEBPACK_IMPORTED_MODULE_4__["default"], {
     cordinates: state,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37,
+      lineNumber: 38,
+      columnNumber: 13
+    }
+  }), __jsx(_components_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39,
       columnNumber: 13
     }
   })), __jsx("section", {
@@ -765,16 +1051,16 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40,
+      lineNumber: 42,
       columnNumber: 11
     }
-  }, __jsx(_components_RightSideBar__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, __jsx(_components_RightSideBar__WEBPACK_IMPORTED_MODULE_5__["default"], {
     getData: getData,
     data: state,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44,
+      lineNumber: 46,
       columnNumber: 13
     }
   })))));
@@ -791,7 +1077,7 @@ const Index = () => {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\Code\Practice\cov19ItaliaWeb\pages\index.js */"./pages/index.js");
+module.exports = __webpack_require__(/*! D:\Code\Personal\dev\covid19it\cov19ItaliaWeb\pages\index.js */"./pages/index.js");
 
 
 /***/ }),
@@ -848,6 +1134,17 @@ module.exports = require("react-countup");
 /***/ (function(module, exports) {
 
 module.exports = require("react-google-maps");
+
+/***/ }),
+
+/***/ "react-live-clock":
+/*!***********************************!*\
+  !*** external "react-live-clock" ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-live-clock");
 
 /***/ })
 

@@ -1,0 +1,41 @@
+.logo_anim {
+  width: 20px;
+  animation: animatedLogo 2s linear infinite;
+  animation-delay: 0;
+}
+
+@keyframes animatedLogo {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.footer {
+  background: gray;
+  color: wheat;
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  z-index: 99999;
+}
+
+@media (max-width: 800px) {
+  .footer {
+    position: fixed;
+    padding: 5px;
+  }
+  .footer-left {
+    left: none;
+  }
+  .footer-right {
+    right: none;
+  }
+}
+
+.footer-left {
+  left: 0;
+}
+.footer-right {
+  right: 0;
+}
