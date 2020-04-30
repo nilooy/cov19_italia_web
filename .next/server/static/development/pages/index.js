@@ -160,7 +160,16 @@ const Layout = props => __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], {
     lineNumber: 18,
     columnNumber: 7
   }
-}, "Covid19 italia")), props.children);
+}, "Covid19 italia"), __jsx("link", {
+  rel: "shortcut icon",
+  href: "https://image.flaticon.com/icons/svg/2659/2659980.svg",
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 19,
+    columnNumber: 7
+  }
+})), props.children);
 
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
 
@@ -454,6 +463,9 @@ const LeftSideBar = props => {
       columnNumber: 15
     }
   }))), __jsx("p", {
+    style: {
+      textAlign: "center"
+    },
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -514,11 +526,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_google_maps__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-google-maps */ "react-google-maps");
 /* harmony import */ var react_google_maps__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_google_maps__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _mapStyles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./mapStyles */ "./components/mapStyles.js");
+/* harmony import */ var _mapStylesDark__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./mapStylesDark */ "./components/mapStylesDark.js");
+/* harmony import */ var _mapStylesRetro__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./mapStylesRetro */ "./components/mapStylesRetro.js");
 var _jsxFileName = "D:\\Code\\Personal\\dev\\covid19it\\cov19ItaliaWeb\\components\\Map.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 /*global google*/
+
 
 
 
@@ -533,11 +547,13 @@ const MapComp = Object(react_google_maps__WEBPACK_IMPORTED_MODULE_1__["withScrip
     lat: 41.8719,
     lng: 12.5674
   },
-  styles: _mapStyles__WEBPACK_IMPORTED_MODULE_2__["default"],
+  options: {
+    styles: props.darkMode ? _mapStylesDark__WEBPACK_IMPORTED_MODULE_2__["default"] : _mapStylesRetro__WEBPACK_IMPORTED_MODULE_3__["default"]
+  },
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 17,
+    lineNumber: 18,
     columnNumber: 5
   }
 }, props.children)));
@@ -574,7 +590,7 @@ const Map = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 51,
+        lineNumber: 54,
         columnNumber: 23
       }
     }),
@@ -585,7 +601,7 @@ const Map = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 52,
+        lineNumber: 55,
         columnNumber: 25
       }
     }),
@@ -596,7 +612,7 @@ const Map = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 53,
+        lineNumber: 56,
         columnNumber: 19
       }
     }),
@@ -604,10 +620,11 @@ const Map = props => {
       lat: 41.8719,
       lng: 12.5674
     },
+    darkMode: props.darkMode,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49,
+      lineNumber: 52,
       columnNumber: 5
     }
   }, props.cordinates.map((item, index) => __jsx(react_google_maps__WEBPACK_IMPORTED_MODULE_1__["Marker"], {
@@ -627,7 +644,7 @@ const Map = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57,
+      lineNumber: 61,
       columnNumber: 9
     }
   }, state.infoIndex === index && __jsx(react_google_maps__WEBPACK_IMPORTED_MODULE_1__["InfoWindow"], {
@@ -635,14 +652,14 @@ const Map = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70,
+      lineNumber: 74,
       columnNumber: 13
     }
   }, __jsx("div", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71,
+      lineNumber: 75,
       columnNumber: 15
     }
   }, __jsx("h6", {
@@ -652,14 +669,14 @@ const Map = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72,
+      lineNumber: 76,
       columnNumber: 17
     }
   }, item.denominazione_provincia), __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75,
+      lineNumber: 79,
       columnNumber: 17
     }
   }, "Totale Casi:", " ", __jsx("span", {
@@ -667,7 +684,7 @@ const Map = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77,
+      lineNumber: 81,
       columnNumber: 19
     }
   }, " ", item.totale_casi)))))));
@@ -808,10 +825,113 @@ const RightSideBar = props => {
 
 /***/ }),
 
-/***/ "./components/mapStyles.js":
-/*!*********************************!*\
-  !*** ./components/mapStyles.js ***!
-  \*********************************/
+/***/ "./components/mapStylesDark.js":
+/*!*************************************!*\
+  !*** ./components/mapStylesDark.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ([{
+  featureType: "all",
+  elementType: "labels.text.fill",
+  stylers: [{
+    color: "#ffffff"
+  }]
+}, {
+  featureType: "all",
+  elementType: "labels.text.stroke",
+  stylers: [{
+    color: "#000000"
+  }, {
+    lightness: 13
+  }]
+}, {
+  featureType: "administrative",
+  elementType: "geometry.fill",
+  stylers: [{
+    color: "#000000"
+  }]
+}, {
+  featureType: "administrative",
+  elementType: "geometry.stroke",
+  stylers: [{
+    color: "#144b53"
+  }, {
+    lightness: 14
+  }, {
+    weight: 1.4
+  }]
+}, {
+  featureType: "landscape",
+  elementType: "all",
+  stylers: [{
+    color: "#08304b"
+  }]
+}, {
+  featureType: "poi",
+  elementType: "geometry",
+  stylers: [{
+    color: "#0c4152"
+  }, {
+    lightness: 5
+  }]
+}, {
+  featureType: "road.highway",
+  elementType: "geometry.fill",
+  stylers: [{
+    color: "#000000"
+  }]
+}, {
+  featureType: "road.highway",
+  elementType: "geometry.stroke",
+  stylers: [{
+    color: "#0b434f"
+  }, {
+    lightness: 25
+  }]
+}, {
+  featureType: "road.arterial",
+  elementType: "geometry.fill",
+  stylers: [{
+    color: "#000000"
+  }]
+}, {
+  featureType: "road.arterial",
+  elementType: "geometry.stroke",
+  stylers: [{
+    color: "#0b3d51"
+  }, {
+    lightness: 16
+  }]
+}, {
+  featureType: "road.local",
+  elementType: "geometry",
+  stylers: [{
+    color: "#000000"
+  }]
+}, {
+  featureType: "transit",
+  elementType: "all",
+  stylers: [{
+    color: "#146474"
+  }]
+}, {
+  featureType: "water",
+  elementType: "all",
+  stylers: [{
+    color: "#021019"
+  }]
+}]);
+
+/***/ }),
+
+/***/ "./components/mapStylesRetro.js":
+/*!**************************************!*\
+  !*** ./components/mapStylesRetro.js ***!
+  \**************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1064,6 +1184,7 @@ const Index = () => {
       columnNumber: 11
     }
   }, __jsx(_components_Map__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    darkMode: darkMode,
     cordinates: state,
     __self: undefined,
     __source: {

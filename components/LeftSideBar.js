@@ -76,7 +76,7 @@ const LeftSideBar = (props) => {
             </span>
           </div>
 
-          <p>
+          <p style={{ textAlign: "center" }}>
             <Clock
               format={"D/MM/YYYY:HH:mm:ss"}
               ticking={true}

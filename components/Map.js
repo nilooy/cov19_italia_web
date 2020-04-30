@@ -7,7 +7,8 @@ import {
   withGoogleMap,
   withScriptjs,
 } from "react-google-maps";
-import mapStyles from "./mapStyles";
+import mapStylesDark from "./mapStylesDark";
+import mapStylesRetro from "./mapStylesRetro";
 
 const API_KEY = process.env.MAP_API;
 const MAP_URL = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}&v=3.exp&libraries=geometry`;
@@ -18,7 +19,9 @@ const MapComp = withScriptjs(
       defaultOptions={{ styles: "retro" }}
       defaultZoom={6}
       defaultCenter={{ lat: 41.8719, lng: 12.5674 }}
-      styles={mapStyles}
+      options={{
+        styles: props.darkMode ? mapStylesDark : mapStylesRetro,
+      }}
     >
       {props.children}
     </GoogleMap>
@@ -52,6 +55,7 @@ const Map = (props) => {
       containerElement={<div style={{ height: `100vh` }} />}
       mapElement={<div style={{ height: `100%` }} />}
       center={{ lat: 41.8719, lng: 12.5674 }}
+      darkMode={props.darkMode}
     >
       {props.cordinates.map((item, index) => (
         <Marker

@@ -16,6 +16,10 @@ const Layout = (props) => (
         crossOrigin="anonymous"
       />
       <title>Covid19 italia</title>
+      <link
+        rel="shortcut icon"
+        href="https://image.flaticon.com/icons/svg/2659/2659980.svg"
+      />
     </Head>
     {props.children}
   </Fragment>

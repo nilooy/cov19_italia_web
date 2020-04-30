@@ -41,7 +41,7 @@ const Index = () => {
           </section>
 
           <section className="col-md-8 px-0 border-right border-left border-gray position-relative h-100">
-            <Map cordinates={state} />
+            <Map darkMode={darkMode} cordinates={state} />
             <Footer />
           </section>
 
