@@ -9,6 +9,8 @@ import Layout from "../Layout";
 const Index = () => {
   const [state, setState] = useState([]);
 
+  const [darkMode, setDarkMode] = useState(false);
+
   useEffect(() => {
     getData("province");
   }, []);
@@ -26,24 +28,31 @@ const Index = () => {
     });
   };
 
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
   return (
     <Layout>
       <main className="container-fluid position-absolute h-100 bg-light">
         <div className="row position-absolute w-100 h-100">
           <section className="col-md-2 position-relative d-flex flex-wrap h-100 align-items-start align-content-between bg-white px-0">
-            <LeftSideBar />
+            <LeftSideBar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
           </section>
 
           <section className="col-md-8 px-0 border-right border-left border-gray position-relative h-100">
-            <Map cordinates={state} />
+            <Map darkMode={darkMode} cordinates={state} />
             <Footer />
           </section>
 
           <section
-            className="col-md-2 position-relative d-flex flex-wrap h-100 align-items-start align-content-between bg-white px-1 py-1"
+            className={
+              "col-md-2 position-relative d-flex flex-wrap h-100 align-items-start align-content-between px-1 py-1 " +
+              (darkMode ? "darkMode" : "")
+            }
             style={{ overflowY: "scroll" }}
           >
-            <RightSideBar getData={getData} data={state} />
+            <RightSideBar darkMode={darkMode} getData={getData} data={state} />
           </section>
         </div>
       </main>
