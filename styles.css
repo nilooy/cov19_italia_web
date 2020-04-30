@@ -14,7 +14,7 @@
   background: gray;
   color: wheat;
   text-align: center;
-  padding: 20px;
+  padding: 12px;
   position: absolute;
   bottom: 0;
   z-index: 99999;
@@ -73,6 +73,7 @@
 .header-title {
   display: flex;
   justify-content: space-around;
+  margin-bottom: 4px;
 }
 
 .lightIcon {
