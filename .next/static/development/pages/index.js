@@ -218,6 +218,7 @@ var Footer = function Footer() {
       columnNumber: 11
     }
   })), " ", "Datasource:", " ", __jsx("a", {
+    target: "_blank",
     className: "text-white",
     href: "https://github.com/pcm-dpc/COVID-19",
     __self: _this,
@@ -556,7 +557,7 @@ var Map = function Map(props) {
       options: {
         icon: {
           url: "https://image.flaticon.com/icons/svg/2659/2659980.svg",
-          scaledSize: new google.maps.Size(25, 25)
+          scaledSize: new window.google.maps.Size(25, 25)
         }
       },
       onMouseOver: function onMouseOver() {
@@ -41772,7 +41773,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44,
+      lineNumber: 43,
       columnNumber: 5
     }
   }, __jsx("main", {
@@ -41780,7 +41781,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45,
+      lineNumber: 44,
       columnNumber: 7
     }
   }, __jsx("div", {
@@ -41788,7 +41789,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46,
+      lineNumber: 45,
       columnNumber: 9
     }
   }, __jsx("section", {
@@ -41796,7 +41797,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47,
+      lineNumber: 46,
       columnNumber: 11
     }
   }, __jsx(_components_LeftSideBar__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -41805,7 +41806,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48,
+      lineNumber: 47,
       columnNumber: 13
     }
   })), __jsx("section", {
@@ -41813,7 +41814,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51,
+      lineNumber: 50,
       columnNumber: 11
     }
   }, __jsx(_components_Map__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -41822,14 +41823,14 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52,
+      lineNumber: 51,
       columnNumber: 13
     }
   }), __jsx(_components_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53,
+      lineNumber: 52,
       columnNumber: 13
     }
   })), __jsx("section", {
@@ -41840,7 +41841,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56,
+      lineNumber: 55,
       columnNumber: 11
     }
   }, __jsx(_components_RightSideBar__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -41850,7 +41851,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63,
+      lineNumber: 62,
       columnNumber: 13
     }
   })))));

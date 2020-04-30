@@ -18,7 +18,6 @@ const Index = () => {
 
   const toggleDarkMode = () => {
     localStorage.setItem("darkMode", !darkMode);
-
     setDarkMode(!darkMode);
   };
 

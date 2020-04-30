@@ -17,7 +17,11 @@ const Footer = () => {
           />
         </a>{" "}
         Datasource:{" "}
-        <a className="text-white" href="https://github.com/pcm-dpc/COVID-19">
+        <a
+          target="_blank"
+          className="text-white"
+          href="https://github.com/pcm-dpc/COVID-19"
+        >
           Protezione Civile
         </a>
       </div>

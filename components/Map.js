@@ -64,7 +64,7 @@ const Map = (props) => {
           options={{
             icon: {
               url: "https://image.flaticon.com/icons/svg/2659/2659980.svg",
-              scaledSize: new google.maps.Size(25, 25),
+              scaledSize: new window.google.maps.Size(25, 25),
             },
           }}
           onMouseOver={() => handleToggleOpen(index)}

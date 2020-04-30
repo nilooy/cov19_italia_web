@@ -40,16 +40,16 @@ var Index = function Index() {
       setDarkMode = _useState2[1];
 
   var getDarkMode = function getDarkMode() {
-    console.log(localStorage.getItem("darkMode"));
+    if (localStorage.getItem("darkMode") == "true") setDarkMode(true);else setDarkMode(false);
   };
 
   var toggleDarkMode = function toggleDarkMode() {
     localStorage.setItem("darkMode", !darkMode);
-    getDarkMode();
     setDarkMode(!darkMode);
   };
 
   Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
+    getDarkMode();
     getData("province");
   }, []);
 
@@ -67,7 +67,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42,
+      lineNumber: 43,
       columnNumber: 5
     }
   }, __jsx("main", {
@@ -75,7 +75,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43,
+      lineNumber: 44,
       columnNumber: 7
     }
   }, __jsx("div", {
@@ -83,7 +83,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44,
+      lineNumber: 45,
       columnNumber: 9
     }
   }, __jsx("section", {
@@ -91,7 +91,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45,
+      lineNumber: 46,
       columnNumber: 11
     }
   }, __jsx(_components_LeftSideBar__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -100,7 +100,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46,
+      lineNumber: 47,
       columnNumber: 13
     }
   })), __jsx("section", {
@@ -108,7 +108,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49,
+      lineNumber: 50,
       columnNumber: 11
     }
   }, __jsx(_components_Map__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -117,14 +117,14 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50,
+      lineNumber: 51,
       columnNumber: 13
     }
   }), __jsx(_components_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51,
+      lineNumber: 52,
       columnNumber: 13
     }
   })), __jsx("section", {
@@ -135,7 +135,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54,
+      lineNumber: 55,
       columnNumber: 11
     }
   }, __jsx(_components_RightSideBar__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -145,7 +145,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61,
+      lineNumber: 62,
       columnNumber: 13
     }
   })))));
@@ -156,4 +156,4 @@ var Index = function Index() {
 /***/ })
 
 })
-//# sourceMappingURL=index.js.a677123a2ff599517fcf.hot-update.js.map
+//# sourceMappingURL=index.js.f5a9c5b451668c074e08.hot-update.js.map

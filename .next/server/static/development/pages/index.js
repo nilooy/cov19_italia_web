@@ -303,6 +303,7 @@ const Footer = () => {
       columnNumber: 11
     }
   })), " ", "Datasource:", " ", __jsx("a", {
+    target: "_blank",
     className: "text-white",
     href: "https://github.com/pcm-dpc/COVID-19",
     __self: undefined,
@@ -633,7 +634,7 @@ const Map = props => {
     options: {
       icon: {
         url: "https://image.flaticon.com/icons/svg/2659/2659980.svg",
-        scaledSize: new google.maps.Size(25, 25)
+        scaledSize: new window.google.maps.Size(25, 25)
       }
     },
     onMouseOver: () => handleToggleOpen(index),
@@ -1143,7 +1144,7 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44,
+      lineNumber: 43,
       columnNumber: 5
     }
   }, __jsx("main", {
@@ -1151,7 +1152,7 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45,
+      lineNumber: 44,
       columnNumber: 7
     }
   }, __jsx("div", {
@@ -1159,7 +1160,7 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46,
+      lineNumber: 45,
       columnNumber: 9
     }
   }, __jsx("section", {
@@ -1167,7 +1168,7 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47,
+      lineNumber: 46,
       columnNumber: 11
     }
   }, __jsx(_components_LeftSideBar__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -1176,7 +1177,7 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48,
+      lineNumber: 47,
       columnNumber: 13
     }
   })), __jsx("section", {
@@ -1184,7 +1185,7 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51,
+      lineNumber: 50,
       columnNumber: 11
     }
   }, __jsx(_components_Map__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -1193,14 +1194,14 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52,
+      lineNumber: 51,
       columnNumber: 13
     }
   }), __jsx(_components_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53,
+      lineNumber: 52,
       columnNumber: 13
     }
   })), __jsx("section", {
@@ -1211,7 +1212,7 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56,
+      lineNumber: 55,
       columnNumber: 11
     }
   }, __jsx(_components_RightSideBar__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -1221,7 +1222,7 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63,
+      lineNumber: 62,
       columnNumber: 13
     }
   })))));
