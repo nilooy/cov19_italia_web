@@ -11,7 +11,19 @@ const Index = () => {
 
   const [darkMode, setDarkMode] = useState(false);
 
+  const getDarkMode = () => {
+    if (localStorage.getItem("darkMode") == "true") setDarkMode(true);
+    else setDarkMode(false);
+  };
+
+  const toggleDarkMode = () => {
+    localStorage.setItem("darkMode", !darkMode);
+
+    setDarkMode(!darkMode);
+  };
+
   useEffect(() => {
+    getDarkMode();
     getData("province");
   }, []);
 
@@ -26,10 +38,6 @@ const Index = () => {
 
       setState(data);
     });
-  };
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
   };
 
   return (
