@@ -41854,7 +41854,7 @@ var Index = function Index() {
 
 /***/ }),
 
-/***/ 2:
+/***/ 3:
 /*!*********************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=D%3A%5CCode%5CPersonal%5Cdev%5Ccovid19it%5Ccov19ItaliaWeb%5Cpages%5Cindex.js ***!
   \*********************************************************************************************************************************************/
@@ -41877,5 +41877,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[3,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
