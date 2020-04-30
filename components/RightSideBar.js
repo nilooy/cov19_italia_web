@@ -11,7 +11,10 @@ const RightSideBar = (props) => {
         (props.darkMode ? "border-info" : "border-gray")
       }
     >
-      <span className="pl-3" style={{ fontSize: "12px" }}>
+      <span
+        className={"pl-3 " + (props.darkMode ? "darkMode-text" : "text-dark")}
+        style={{ fontSize: "12px" }}
+      >
         {province.denominazione_provincia || province.denominazione_regione}
       </span>
       <div className="pl-2" style={{ width: 30, height: 30 }}>

@@ -214,10 +214,7 @@ const CardStat = props => {
       columnNumber: 7
     }
   }, __jsx("h5", {
-    className: "card-title",
-    style: {
-      color: "grey"
-    },
+    className: "card-title " + (props.darkMode ? "darkMode-text" : "text-dark"),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -229,7 +226,7 @@ const CardStat = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16,
+      lineNumber: 20,
       columnNumber: 9
     }
   }, !props.dateField && __jsx(react_countup__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -237,7 +234,7 @@ const CardStat = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17,
+      lineNumber: 21,
       columnNumber: 32
     }
   }), props.dateField && props.text)));
@@ -725,7 +722,7 @@ const RightSideBar = props => {
       columnNumber: 5
     }
   }, __jsx("span", {
-    className: "pl-3",
+    className: "pl-3 " + (props.darkMode ? "darkMode-text" : "text-dark"),
     style: {
       fontSize: "12px"
     },
@@ -744,7 +741,7 @@ const RightSideBar = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17,
+      lineNumber: 20,
       columnNumber: 7
     }
   }, __jsx("div", {
@@ -752,7 +749,7 @@ const RightSideBar = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18,
+      lineNumber: 21,
       columnNumber: 9
     }
   }, province.totale_casi)));
@@ -761,7 +758,7 @@ const RightSideBar = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24,
+      lineNumber: 27,
       columnNumber: 5
     }
   }, __jsx("div", {
@@ -772,7 +769,7 @@ const RightSideBar = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25,
+      lineNumber: 28,
       columnNumber: 7
     }
   }, __jsx("span", {
@@ -787,7 +784,7 @@ const RightSideBar = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29,
+      lineNumber: 32,
       columnNumber: 9
     }
   }, "Provincia"), __jsx("span", {
@@ -802,7 +799,7 @@ const RightSideBar = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42,
+      lineNumber: 45,
       columnNumber: 9
     }
   }, "Regione")), __jsx("div", {
@@ -815,7 +812,7 @@ const RightSideBar = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57,
+      lineNumber: 60,
       columnNumber: 7
     }
   }, props.data.map((item, index) => showProvince(item, index))));

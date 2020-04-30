@@ -10,7 +10,11 @@ const CardStat = (props) => {
       style={{ width: "100%" }}
     >
       <div className="card-body text-success">
-        <h5 className="card-title" style={{ color: "grey" }}>
+        <h5
+          className={
+            "card-title " + (props.darkMode ? "darkMode-text" : "text-dark")
+          }
+        >
           {props.title}
         </h5>
         <h5 className="card-text">
