@@ -1,7 +1,7 @@
 module.exports =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
-/******/ 	var installedModules = {};
+/******/ 	var installedModules = require('../../../ssr-module-cache.js');
 /******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
@@ -88,23 +88,53 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "KqAr");
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "KqAr":
+/***/ 0:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("1TCz");
+
+
+/***/ }),
+
+/***/ "1TCz":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return MyApp; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("cDcd");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("L1EO");
+/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_css__WEBPACK_IMPORTED_MODULE_1__);
 
-    
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+ // This default export is required in a new `pages/_app.js` file.
 
-    /* harmony default export */ __webpack_exports__["default"] = (function (ctx) {
-      return Promise.all([])
-    });
-  
+function MyApp({
+  Component,
+  pageProps
+}) {
+  return __jsx(Component, pageProps);
+}
+
+/***/ }),
+
+/***/ "L1EO":
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ "cDcd":
+/***/ (function(module, exports) {
+
+module.exports = require("react");
 
 /***/ })
 
