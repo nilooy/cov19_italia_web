@@ -86,3 +86,51 @@
 .lightIcon:hover {
   box-shadow: 3px 3px 25px lightseagreen;
 }
+
+.tooltip-c {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip-c .tooltiptext {
+  visibility: hidden;
+  position: absolute;
+  width: 120px;
+  background-color: #fff;
+  color: gray;
+  text-align: center;
+  padding: 5px 0;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s;
+  top: -5px;
+  left: 125%;
+  transition: 0.8s;
+  animation: scaleAnim 0.5s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes scaleAnim {
+  from {
+    transform: translateX(-5px);
+  }
+  to {
+    transform: translateX(10px);
+  }
+}
+
+.tooltip-c .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent #fff transparent transparent;
+}
+
+.tooltiptext-show {
+  visibility: visible !important;
+  opacity: 1 !important;
+}

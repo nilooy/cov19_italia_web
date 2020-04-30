@@ -14,6 +14,8 @@ const LeftSideBar = (props) => {
     data: Date.now(),
   });
 
+  const [toolTip, setToolTip] = useState(false);
+
   useEffect(() => {
     axios.get(process.env.API_URL + "stats").then((res) => {
       const resData = res.data[0];
@@ -27,8 +29,21 @@ const LeftSideBar = (props) => {
         terapia_intensiva: resData.terapia_intensiva,
         "l'ultimo_aggiornamento": formatDate(resData.data),
       });
+
+      showToolTip();
     });
   }, []);
+
+  const showToolTip = () => {
+    if (localStorage.getItem("darkMode") === null) {
+      setTimeout(() => {
+        setToolTip(true);
+        setTimeout(() => {
+          setToolTip(false);
+        }, 5000);
+      }, 4000);
+    }
+  };
 
   const makeUpperCase = (text) => {
     let splitedText = text.split("_");
@@ -63,7 +78,10 @@ const LeftSideBar = (props) => {
             />
             <span className="h5 mb-0 mx-2 font-weight-bold">Statistica</span>
 
-            <span className="lightIcon" onClick={props.toggleDarkMode}>
+            <span
+              className="lightIcon tooltip-c"
+              onClick={props.toggleDarkMode}
+            >
               <img
                 src={
                   !props.darkMode
@@ -73,6 +91,11 @@ const LeftSideBar = (props) => {
                 width="20"
                 alt="flaticon"
               />
+              <span
+                className={"tooltiptext " + (toolTip ? "tooltiptext-show" : "")}
+              >
+                Passare alla modalità luce
+              </span>
             </span>
           </div>
 

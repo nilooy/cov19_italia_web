@@ -272,6 +272,10 @@ var LeftSideBar = function LeftSideBar(props) {
       state = _useState[0],
       setState = _useState[1];
 
+  var _useState2 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(false),
+      toolTip = _useState2[0],
+      setToolTip = _useState2[1];
+
   Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("http://localhost:8000/api/" + "stats").then(function (res) {
       var resData = res.data[0];
@@ -284,8 +288,20 @@ var LeftSideBar = function LeftSideBar(props) {
         terapia_intensiva: resData.terapia_intensiva,
         "l'ultimo_aggiornamento": formatDate(resData.data)
       });
+      showToolTip();
     });
   }, []);
+
+  var showToolTip = function showToolTip() {
+    if (localStorage.getItem("darkMode") === null) {
+      setTimeout(function () {
+        setToolTip(true);
+        setTimeout(function () {
+          setToolTip(false);
+        }, 5000);
+      }, 4000);
+    }
+  };
 
   var makeUpperCase = function makeUpperCase(text) {
     var splitedText = text.split("_");
@@ -308,7 +324,7 @@ var LeftSideBar = function LeftSideBar(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49,
+      lineNumber: 64,
       columnNumber: 5
     }
   }, __jsx("div", {
@@ -319,7 +335,7 @@ var LeftSideBar = function LeftSideBar(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50,
+      lineNumber: 65,
       columnNumber: 7
     }
   }, __jsx("div", {
@@ -329,7 +345,7 @@ var LeftSideBar = function LeftSideBar(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57,
+      lineNumber: 72,
       columnNumber: 9
     }
   }, __jsx("div", {
@@ -337,7 +353,7 @@ var LeftSideBar = function LeftSideBar(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58,
+      lineNumber: 73,
       columnNumber: 11
     }
   }, __jsx("img", {
@@ -347,7 +363,7 @@ var LeftSideBar = function LeftSideBar(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59,
+      lineNumber: 74,
       columnNumber: 13
     }
   }), __jsx("span", {
@@ -355,16 +371,16 @@ var LeftSideBar = function LeftSideBar(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64,
+      lineNumber: 79,
       columnNumber: 13
     }
   }, "Statistica"), __jsx("span", {
-    className: "lightIcon",
+    className: "lightIcon tooltip-c",
     onClick: props.toggleDarkMode,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66,
+      lineNumber: 81,
       columnNumber: 13
     }
   }, __jsx("img", {
@@ -374,17 +390,25 @@ var LeftSideBar = function LeftSideBar(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67,
+      lineNumber: 85,
       columnNumber: 15
     }
-  }))), __jsx("p", {
+  }), __jsx("span", {
+    className: "tooltiptext " + (toolTip ? "tooltiptext-show" : ""),
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 94,
+      columnNumber: 15
+    }
+  }, "Passare alla modalit\xE0 luce"))), __jsx("p", {
     style: {
       textAlign: "center"
     },
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79,
+      lineNumber: 102,
       columnNumber: 11
     }
   }, __jsx(react_live_clock__WEBPACK_IMPORTED_MODULE_2___default.a, {
@@ -394,7 +418,7 @@ var LeftSideBar = function LeftSideBar(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80,
+      lineNumber: 103,
       columnNumber: 13
     }
   })))), __jsx("div", {
@@ -406,7 +430,7 @@ var LeftSideBar = function LeftSideBar(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88,
+      lineNumber: 111,
       columnNumber: 7
     }
   }, Object.keys(state).map(function (key, index) {
@@ -419,7 +443,7 @@ var LeftSideBar = function LeftSideBar(props) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 96,
+        lineNumber: 119,
         columnNumber: 11
       }
     });
@@ -556,8 +580,7 @@ var Map = function Map(props) {
       },
       options: {
         icon: {
-          url: "https://image.flaticon.com/icons/svg/2659/2659980.svg",
-          scaledSize: new window.google.maps.Size(25, 25)
+          url: "http://localhost:8000/api/" + "img/virus.png"
         }
       },
       onMouseOver: function onMouseOver() {
@@ -577,14 +600,14 @@ var Map = function Map(props) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 74,
+        lineNumber: 73,
         columnNumber: 13
       }
     }, __jsx("div", {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 75,
+        lineNumber: 74,
         columnNumber: 15
       }
     }, __jsx("h6", {
@@ -594,14 +617,14 @@ var Map = function Map(props) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 76,
+        lineNumber: 75,
         columnNumber: 17
       }
     }, item.denominazione_provincia), __jsx("h5", {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 79,
+        lineNumber: 78,
         columnNumber: 17
       }
     }, "Totale Casi:", " ", __jsx("span", {
@@ -609,7 +632,7 @@ var Map = function Map(props) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 81,
+        lineNumber: 80,
         columnNumber: 19
       }
     }, " ", item.totale_casi)))));

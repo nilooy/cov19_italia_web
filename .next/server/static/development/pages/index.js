@@ -355,6 +355,10 @@ const LeftSideBar = props => {
     terapia_intensiva: 0,
     data: Date.now()
   });
+  const {
+    0: toolTip,
+    1: setToolTip
+  } = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(false);
   Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(() => {
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("http://localhost:8000/api/" + "stats").then(res => {
       const resData = res.data[0];
@@ -367,8 +371,20 @@ const LeftSideBar = props => {
         terapia_intensiva: resData.terapia_intensiva,
         "l'ultimo_aggiornamento": formatDate(resData.data)
       });
+      showToolTip();
     });
   }, []);
+
+  const showToolTip = () => {
+    if (localStorage.getItem("darkMode") === null) {
+      setTimeout(() => {
+        setToolTip(true);
+        setTimeout(() => {
+          setToolTip(false);
+        }, 5000);
+      }, 4000);
+    }
+  };
 
   const makeUpperCase = text => {
     let splitedText = text.split("_");
@@ -391,7 +407,7 @@ const LeftSideBar = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49,
+      lineNumber: 64,
       columnNumber: 5
     }
   }, __jsx("div", {
@@ -402,7 +418,7 @@ const LeftSideBar = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50,
+      lineNumber: 65,
       columnNumber: 7
     }
   }, __jsx("div", {
@@ -412,7 +428,7 @@ const LeftSideBar = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57,
+      lineNumber: 72,
       columnNumber: 9
     }
   }, __jsx("div", {
@@ -420,7 +436,7 @@ const LeftSideBar = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58,
+      lineNumber: 73,
       columnNumber: 11
     }
   }, __jsx("img", {
@@ -430,7 +446,7 @@ const LeftSideBar = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59,
+      lineNumber: 74,
       columnNumber: 13
     }
   }), __jsx("span", {
@@ -438,16 +454,16 @@ const LeftSideBar = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64,
+      lineNumber: 79,
       columnNumber: 13
     }
   }, "Statistica"), __jsx("span", {
-    className: "lightIcon",
+    className: "lightIcon tooltip-c",
     onClick: props.toggleDarkMode,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66,
+      lineNumber: 81,
       columnNumber: 13
     }
   }, __jsx("img", {
@@ -457,17 +473,25 @@ const LeftSideBar = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67,
+      lineNumber: 85,
       columnNumber: 15
     }
-  }))), __jsx("p", {
+  }), __jsx("span", {
+    className: "tooltiptext " + (toolTip ? "tooltiptext-show" : ""),
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 94,
+      columnNumber: 15
+    }
+  }, "Passare alla modalit\xE0 luce"))), __jsx("p", {
     style: {
       textAlign: "center"
     },
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79,
+      lineNumber: 102,
       columnNumber: 11
     }
   }, __jsx(react_live_clock__WEBPACK_IMPORTED_MODULE_2___default.a, {
@@ -477,7 +501,7 @@ const LeftSideBar = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80,
+      lineNumber: 103,
       columnNumber: 13
     }
   })))), __jsx("div", {
@@ -489,7 +513,7 @@ const LeftSideBar = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88,
+      lineNumber: 111,
       columnNumber: 7
     }
   }, Object.keys(state).map((key, index) => __jsx(_CardStat__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -501,7 +525,7 @@ const LeftSideBar = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96,
+      lineNumber: 119,
       columnNumber: 11
     }
   }))));
@@ -633,8 +657,7 @@ const Map = props => {
     },
     options: {
       icon: {
-        url: "https://image.flaticon.com/icons/svg/2659/2659980.svg",
-        scaledSize: new window.google.maps.Size(25, 25)
+        url: "http://localhost:8000/api/" + "img/virus.png"
       }
     },
     onMouseOver: () => handleToggleOpen(index),
@@ -650,14 +673,14 @@ const Map = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74,
+      lineNumber: 73,
       columnNumber: 13
     }
   }, __jsx("div", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75,
+      lineNumber: 74,
       columnNumber: 15
     }
   }, __jsx("h6", {
@@ -667,14 +690,14 @@ const Map = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76,
+      lineNumber: 75,
       columnNumber: 17
     }
   }, item.denominazione_provincia), __jsx("h5", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79,
+      lineNumber: 78,
       columnNumber: 17
     }
   }, "Totale Casi:", " ", __jsx("span", {
@@ -682,7 +705,7 @@ const Map = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81,
+      lineNumber: 80,
       columnNumber: 19
     }
   }, " ", item.totale_casi)))))));

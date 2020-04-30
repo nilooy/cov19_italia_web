@@ -63,8 +63,7 @@ const Map = (props) => {
           position={{ lat: parseFloat(item.lat), lng: parseFloat(item.long) }}
           options={{
             icon: {
-              url: "https://image.flaticon.com/icons/svg/2659/2659980.svg",
-              scaledSize: new window.google.maps.Size(25, 25),
+              url: process.env.API_URL + "img/virus.png",
             },
           }}
           onMouseOver={() => handleToggleOpen(index)}
