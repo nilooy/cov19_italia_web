@@ -6,7 +6,10 @@ const RightSideBar = (props) => {
   const showProvince = (province, index) => (
     <div
       key={index}
-      className="d-flex border-bottom border-gray w-100 px-1 font-weight-bold text-secondary align-items-center"
+      className={
+        "d-flex border-bottom  w-100 px-1 font-weight-bold text-secondary align-items-center " +
+        (props.darkMode ? "border-info" : "border-gray")
+      }
     >
       <span className="pl-3" style={{ fontSize: "12px" }}>
         {province.denominazione_provincia || province.denominazione_regione}
@@ -25,7 +28,7 @@ const RightSideBar = (props) => {
       >
         <span
           className={
-            "col-md-6 col-sm-12 h5 text-dark font-weight-bold btn " +
+            "col-md-6 col-sm-12 h5  font-weight-bold btn " +
             (state === "province" ? "btn-info" : "btn-outline-info")
           }
           style={{ cursor: "pointer" }}
@@ -38,7 +41,7 @@ const RightSideBar = (props) => {
         </span>
         <span
           className={
-            "col-md-6 col-sm-12 h5 text-dark font-weight-bold btn " +
+            "col-md-6 col-sm-12 h5 font-weight-bold btn " +
             (state === "regione" ? "btn-info" : "btn-outline-info")
           }
           style={{ cursor: "pointer" }}
@@ -52,8 +55,12 @@ const RightSideBar = (props) => {
       </div>
 
       <div
-        className="w-100 d-flex flex-wrap align-items-start align-content-start position-relative"
-        style={{ height: "calc(100% - 90px)", overflowY: "auto" }}
+        className="w-100 d-flex flex-wrap align-items-start align-content-start position-relative customScrollbar"
+        style={{
+          height: "calc(100% - 90px)",
+          overflowY: "auto",
+          overflowX: "hidden",
+        }}
       >
         {props.data.map((item, index) => showProvince(item, index))}
       </div>

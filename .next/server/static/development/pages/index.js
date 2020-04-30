@@ -186,7 +186,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 const CardStat = props => {
   return __jsx("div", {
-    className: "card mb-3 border-default",
+    className: "card mb-3 border-default " + (props.darkMode ? "darkMode" : ""),
     style: {
       width: "100%"
     },
@@ -201,7 +201,7 @@ const CardStat = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7,
+      lineNumber: 12,
       columnNumber: 7
     }
   }, __jsx("h5", {
@@ -212,7 +212,7 @@ const CardStat = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8,
+      lineNumber: 13,
       columnNumber: 9
     }
   }, props.title), __jsx("h5", {
@@ -220,7 +220,7 @@ const CardStat = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11,
+      lineNumber: 16,
       columnNumber: 9
     }
   }, !props.dateField && __jsx(react_countup__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -228,7 +228,7 @@ const CardStat = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12,
+      lineNumber: 17,
       columnNumber: 32
     }
   }), props.dateField && props.text)));
@@ -335,7 +335,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
-const LeftSideBar = () => {
+const LeftSideBar = props => {
   const {
     0: state,
     1: setState
@@ -388,7 +388,7 @@ const LeftSideBar = () => {
       columnNumber: 5
     }
   }, __jsx("div", {
-    className: "border-bottom border-gray w-100 px-2 d-flex align-items-center bg-white justify-content-between",
+    className: "border-bottom border-gray w-100 px-2 d-flex align-items-center  justify-content-between " + (props.darkMode ? "darkMode" : ""),
     style: {
       height: 90
     },
@@ -399,11 +399,22 @@ const LeftSideBar = () => {
       columnNumber: 7
     }
   }, __jsx("div", {
+    style: {
+      width: "100%"
+    },
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54,
+      lineNumber: 57,
       columnNumber: 9
+    }
+  }, __jsx("div", {
+    className: "header-title",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 58,
+      columnNumber: 11
     }
   }, __jsx("img", {
     className: "logo_anim",
@@ -412,29 +423,41 @@ const LeftSideBar = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55,
-      columnNumber: 11
+      lineNumber: 59,
+      columnNumber: 13
     }
   }), __jsx("span", {
-    className: "h5 text-dark mb-0 mx-2 font-weight-bold",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 60,
-      columnNumber: 11
-    }
-  }, "Statistica"), __jsx("br", {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 63,
-      columnNumber: 11
-    }
-  }), __jsx("p", {
+    className: "h5 mb-0 mx-2 font-weight-bold",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 64,
+      columnNumber: 13
+    }
+  }, "Statistica"), __jsx("span", {
+    className: "lightIcon",
+    onClick: props.toggleDarkMode,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 66,
+      columnNumber: 13
+    }
+  }, __jsx("img", {
+    src: !props.darkMode ? "https://image.flaticon.com/icons/svg/841/841641.svg" : "https://image.flaticon.com/icons/png/512/841/841539.png",
+    width: "20",
+    alt: "flaticon",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 67,
+      columnNumber: 15
+    }
+  }))), __jsx("p", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 79,
       columnNumber: 11
     }
   }, __jsx(react_live_clock__WEBPACK_IMPORTED_MODULE_2___default.a, {
@@ -444,11 +467,11 @@ const LeftSideBar = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65,
+      lineNumber: 80,
       columnNumber: 13
     }
   })))), __jsx("div", {
-    className: "w-100 d-flex flex-wrap align-items-start align-content-start position-relative",
+    className: "w-100 d-flex flex-wrap align-items-start align-content-start position-relative customScrollbar " + (props.darkMode ? "bg-dark" : ""),
     style: {
       height: "calc(100% - 90px)",
       overflowY: "auto"
@@ -456,7 +479,7 @@ const LeftSideBar = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73,
+      lineNumber: 88,
       columnNumber: 7
     }
   }, Object.keys(state).map((key, index) => __jsx(_CardStat__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -464,10 +487,11 @@ const LeftSideBar = () => {
     text: state[key],
     key: index,
     dateField: key == "l'ultimo_aggiornamento" ? true : false,
+    darkMode: props.darkMode,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78,
+      lineNumber: 96,
       columnNumber: 11
     }
   }))));
@@ -676,7 +700,7 @@ const RightSideBar = props => {
 
   const showProvince = (province, index) => __jsx("div", {
     key: index,
-    className: "d-flex border-bottom border-gray w-100 px-1 font-weight-bold text-secondary align-items-center",
+    className: "d-flex border-bottom  w-100 px-1 font-weight-bold text-secondary align-items-center " + (props.darkMode ? "border-info" : "border-gray"),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -691,7 +715,7 @@ const RightSideBar = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11,
+      lineNumber: 14,
       columnNumber: 7
     }
   }, province.denominazione_provincia || province.denominazione_regione), __jsx("div", {
@@ -703,7 +727,7 @@ const RightSideBar = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14,
+      lineNumber: 17,
       columnNumber: 7
     }
   }, __jsx("div", {
@@ -711,7 +735,7 @@ const RightSideBar = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15,
+      lineNumber: 18,
       columnNumber: 9
     }
   }, province.totale_casi)));
@@ -720,7 +744,7 @@ const RightSideBar = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
+      lineNumber: 24,
       columnNumber: 5
     }
   }, __jsx("div", {
@@ -731,11 +755,11 @@ const RightSideBar = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22,
+      lineNumber: 25,
       columnNumber: 7
     }
   }, __jsx("span", {
-    className: "col-md-6 col-sm-12 h5 text-dark font-weight-bold btn " + (state === "province" ? "btn-info" : "btn-outline-info"),
+    className: "col-md-6 col-sm-12 h5  font-weight-bold btn " + (state === "province" ? "btn-info" : "btn-outline-info"),
     style: {
       cursor: "pointer"
     },
@@ -746,11 +770,11 @@ const RightSideBar = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26,
+      lineNumber: 29,
       columnNumber: 9
     }
   }, "Provincia"), __jsx("span", {
-    className: "col-md-6 col-sm-12 h5 text-dark font-weight-bold btn " + (state === "regione" ? "btn-info" : "btn-outline-info"),
+    className: "col-md-6 col-sm-12 h5 font-weight-bold btn " + (state === "regione" ? "btn-info" : "btn-outline-info"),
     style: {
       cursor: "pointer"
     },
@@ -761,19 +785,20 @@ const RightSideBar = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39,
+      lineNumber: 42,
       columnNumber: 9
     }
   }, "Regione")), __jsx("div", {
-    className: "w-100 d-flex flex-wrap align-items-start align-content-start position-relative",
+    className: "w-100 d-flex flex-wrap align-items-start align-content-start position-relative customScrollbar",
     style: {
       height: "calc(100% - 90px)",
-      overflowY: "auto"
+      overflowY: "auto",
+      overflowX: "hidden"
     },
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54,
+      lineNumber: 57,
       columnNumber: 7
     }
   }, props.data.map((item, index) => showProvince(item, index))));
@@ -970,6 +995,10 @@ const Index = () => {
     0: state,
     1: setState
   } = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])([]);
+  const {
+    0: darkMode,
+    1: setDarkMode
+  } = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(false);
   Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(() => {
     getData("province");
   }, []);
@@ -982,11 +1011,15 @@ const Index = () => {
     });
   };
 
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
   return __jsx(_Layout__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30,
+      lineNumber: 36,
       columnNumber: 5
     }
   }, __jsx("main", {
@@ -994,7 +1027,7 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31,
+      lineNumber: 37,
       columnNumber: 7
     }
   }, __jsx("div", {
@@ -1002,7 +1035,7 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32,
+      lineNumber: 38,
       columnNumber: 9
     }
   }, __jsx("section", {
@@ -1010,14 +1043,16 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33,
+      lineNumber: 39,
       columnNumber: 11
     }
   }, __jsx(_components_LeftSideBar__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    darkMode: darkMode,
+    toggleDarkMode: toggleDarkMode,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34,
+      lineNumber: 40,
       columnNumber: 13
     }
   })), __jsx("section", {
@@ -1025,7 +1060,7 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37,
+      lineNumber: 43,
       columnNumber: 11
     }
   }, __jsx(_components_Map__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -1033,34 +1068,35 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38,
+      lineNumber: 44,
       columnNumber: 13
     }
   }), __jsx(_components_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39,
+      lineNumber: 45,
       columnNumber: 13
     }
   })), __jsx("section", {
-    className: "col-md-2 position-relative d-flex flex-wrap h-100 align-items-start align-content-between bg-white px-1 py-1",
+    className: "col-md-2 position-relative d-flex flex-wrap h-100 align-items-start align-content-between px-1 py-1 " + (darkMode ? "darkMode" : ""),
     style: {
       overflowY: "scroll"
     },
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42,
+      lineNumber: 48,
       columnNumber: 11
     }
   }, __jsx(_components_RightSideBar__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    darkMode: darkMode,
     getData: getData,
     data: state,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46,
+      lineNumber: 55,
       columnNumber: 13
     }
   })))));

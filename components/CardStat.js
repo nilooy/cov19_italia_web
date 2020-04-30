@@ -3,7 +3,12 @@ import CountUp from "react-countup";
 
 const CardStat = (props) => {
   return (
-    <div className={"card mb-3 border-default"} style={{ width: "100%" }}>
+    <div
+      className={
+        "card mb-3 border-default " + (props.darkMode ? "darkMode" : "")
+      }
+      style={{ width: "100%" }}
+    >
       <div className="card-body text-success">
         <h5 className="card-title" style={{ color: "grey" }}>
           {props.title}

@@ -3,7 +3,7 @@ import React, { Fragment, useEffect, useState } from "react";
 import Clock from "react-live-clock";
 import CardStat from "./CardStat";
 
-const LeftSideBar = () => {
+const LeftSideBar = (props) => {
   const [state, setState] = useState({
     nuovi_positivi: 0,
     totale_casi: 0,
@@ -48,19 +48,34 @@ const LeftSideBar = () => {
   return (
     <Fragment>
       <div
-        className="border-bottom border-gray w-100 px-2 d-flex align-items-center bg-white justify-content-between"
+        className={
+          "border-bottom border-gray w-100 px-2 d-flex align-items-center  justify-content-between " +
+          (props.darkMode ? "darkMode" : "")
+        }
         style={{ height: 90 }}
       >
-        <div>
-          <img
-            className="logo_anim"
-            src="https://image.flaticon.com/icons/svg/2659/2659980.svg"
-            alt="cov19"
-          />
-          <span className="h5 text-dark mb-0 mx-2 font-weight-bold">
-            Statistica
-          </span>
-          <br />
+        <div style={{ width: "100%" }}>
+          <div className="header-title">
+            <img
+              className="logo_anim"
+              src="https://image.flaticon.com/icons/svg/2659/2659980.svg"
+              alt="cov19"
+            />
+            <span className="h5 mb-0 mx-2 font-weight-bold">Statistica</span>
+
+            <span className="lightIcon" onClick={props.toggleDarkMode}>
+              <img
+                src={
+                  !props.darkMode
+                    ? "https://image.flaticon.com/icons/svg/841/841641.svg"
+                    : "https://image.flaticon.com/icons/png/512/841/841539.png"
+                }
+                width="20"
+                alt="flaticon"
+              />
+            </span>
+          </div>
+
           <p>
             <Clock
               format={"D/MM/YYYY:HH:mm:ss"}
@@ -71,7 +86,10 @@ const LeftSideBar = () => {
         </div>
       </div>
       <div
-        className="w-100 d-flex flex-wrap align-items-start align-content-start position-relative"
+        className={
+          "w-100 d-flex flex-wrap align-items-start align-content-start position-relative customScrollbar " +
+          (props.darkMode ? "bg-dark" : "")
+        }
         style={{ height: "calc(100% - 90px)", overflowY: "auto" }}
       >
         {Object.keys(state).map((key, index) => (
@@ -80,6 +98,7 @@ const LeftSideBar = () => {
             text={state[key]}
             key={index}
             dateField={key == "l'ultimo_aggiornamento" ? true : false}
+            darkMode={props.darkMode}
           />
         ))}
       </div>
